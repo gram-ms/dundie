@@ -1,7 +1,5 @@
 My first real program for study. Rewards System for dunder mifflin company
 
-[![CI](https://github.com/rochacbruno/dundie-rewards/actions/workflows/main.yml/badge.svg)](https://github.com/rochacbruno/dundie-rewards/actions/workflows/main.yml)
-
 Nós fomos contratados pela Dunder Mifflin, grande fabricante de papéis para desenvolver um sistema
 de recompensas para seus colaboradores.
 
