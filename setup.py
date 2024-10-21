@@ -37,6 +37,7 @@ setup(
 # As pastas que não tiver um __init__.py serão ignoradas.
   # packages=["dundie"],# geralmente todas as pastas de módulos no seu diretório
     packages=find_packages(),
+    python_requires=">=3.12.2",
     entry_points={
         "console_scripts":[
             "dundie = dundie.__main__:main"
