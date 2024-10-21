@@ -2,6 +2,7 @@
 ipython
 ipdb
 pudb
+pytest-watch
 
 # install project as editable
 -e .
