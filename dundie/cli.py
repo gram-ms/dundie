@@ -1,6 +1,7 @@
 import argparse
 from dundie.core import load
 
+# I implemented this like a little monkey, so deal with it.
 def main():
     # print("Executing entrypoint for dundie...")
 
