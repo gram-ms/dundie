@@ -12,7 +12,7 @@ test:
 	@.venv/bin/pytest -vv -s 
 
 testci:
-	@.venv/bin/pytest -v --junitxml=test-result.xml
+	@pytest -v --junitxml=test-result.xml
 
 watch:
 	@@.venv/bin/ptw -- -vv -s tests/
