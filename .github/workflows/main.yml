@@ -1,16 +1,13 @@
-name:
+name: Run Tests
 
-# Pull requests are run as soon as... 
 on:
   push:
     branches:
       - main
   pull_request:
     branches:
-    - "main"
-
+      - main
   workflow_dispatch:
-
 
 jobs:
   tests:
@@ -19,20 +16,25 @@ jobs:
       matrix:
         python-version: [3.12.2, 3.12]
         os: [ubuntu-latest]
-    runs-on: ${{matrix.os}}
+    runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: ${{matrix.python-version}}
+          python-version: ${{ matrix.python-version }}
       - name: Install Project
-        run: pip install '.[test]'
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install '.[test]'
       - name: Run tests
-        run: make testci
-      - name: publish junit results
+        run: |
+          source .venv/bin/activate
+          pytest --junitxml=test-result.xml
+      - name: Publish JUnit results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
           files: test-result.xml
-          check_name: Test Result (Python ${{matrix.python-version}})
-
+          check_name: Test Result (Python ${{ matrix.python-version }})
