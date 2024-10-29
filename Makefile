@@ -11,8 +11,6 @@ virtualenv:
 test:
 	@.venv/bin/pytest -vv -s 
 
-testci:
-	@pytest -v --junitxml=test-result.xml
 
 watch:
 	@@.venv/bin/ptw -- -vv -s tests/
