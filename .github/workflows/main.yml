@@ -1,10 +1,9 @@
 name:
 
-
 # Pull requests are run as soon as... 
 on:
   push:
-    branches::
+    branches:
       - main
   pull_request:
     branches:
@@ -29,4 +28,10 @@ jobs:
       - name: Install Project
         run: pip install '.[test]'
       - name: Run tests
-        run: pytest -vv tests integration
+        run: pytest -v --junitxml=test-result.xml
+      - name: publish junit results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          files: test-result.xml
+          check_name: Test Result (Python ${{matrix.python-version}})

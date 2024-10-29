@@ -11,6 +11,7 @@ virtualenv:
 test:
 	@.venv/bin/pytest -vv -s 
 
+
 watch:
 	@@.venv/bin/ptw -- -vv -s tests/
 #	utilizando entr
