@@ -3,7 +3,8 @@ from dundie.utils.log import get_logger
 
 log = get_logger()
 
-def load(filepath:str):
+
+def load(filepath: str):
     """Function that reads a file
     >>> load("assets/peaple.csv")
     Jim Halpert, Sales, Salesman, jim@dundlermifflin.com

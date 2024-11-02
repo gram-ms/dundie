@@ -1,5 +1,6 @@
 import argparse
-from dundie.core import load
+from dundie.core import load # noqa
+
 
 # I implemented this like a little monkey, so deal with it.
 def main():

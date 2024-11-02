@@ -3,6 +3,8 @@ ipython
 ipdb
 pudb
 pytest-watch
+flake8
+pyproject-flake8
 
 # install project as editable
 -e .

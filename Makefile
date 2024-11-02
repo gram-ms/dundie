@@ -1,4 +1,4 @@
-.PHONY: install virtualenv clean test
+.PHONY: install virtualenv clean test lint
 
 install:
 # O @ serve para não mostrar o comando no terminal, apenas mostrar o stdout
@@ -7,6 +7,9 @@ install:
 
 virtualenv:
 	python -m venv .venv
+
+lint:
+	@.venv/bin/pflake8
 
 test:
 	@.venv/bin/pytest -vv -s 
