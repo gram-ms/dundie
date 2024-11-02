@@ -8,3 +8,8 @@ testpaths = [
 
 [tool.flake8]
 exclude = [".venv", "build"] 
+
+
+[tool.black]
+line-length = 79
+target-version = ["py39"]

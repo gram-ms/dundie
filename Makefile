@@ -1,4 +1,4 @@
-.PHONY: install virtualenv clean test lint
+.PHONY: install virtualenv clean test lint fmt
 
 install:
 # O @ serve para não mostrar o comando no terminal, apenas mostrar o stdout
@@ -9,11 +9,13 @@ virtualenv:
 	python -m venv .venv
 
 lint:
-	@.venv/bin/pflake8
+	@.venv/bin/pflake8 dundie tests integration
 
 test:
 	@.venv/bin/pytest -vv -s 
 
+fmt:
+	@.venv/bin/black dundie tests integration
 
 watch:
 	@@.venv/bin/ptw -- -vv -s tests/

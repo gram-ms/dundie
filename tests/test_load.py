@@ -1,4 +1,3 @@
-import uuid
 from dundie.core import load
 from tests.constants import PEAPLE_FILE
 import pytest
@@ -15,4 +14,4 @@ def test_load_positive_has_2_people():
 @pytest.mark.medium
 def test_load_positive_first_name_starts_with_j():
     """Test function load function."""
-    assert load(PEAPLE_FILE)[0][0] == 'J'
+    assert load(PEAPLE_FILE)[0][0] == "J"

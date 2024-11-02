@@ -7,15 +7,15 @@ medium: medium priority
 low: low priority
 """
 
+
 def pytest_configure(config):
     """Obtain the MARKERs const"""
     for line in MARKER.split("\n"):
-        config.addinivalue_line('markers', line)
+        config.addinivalue_line("markers", line)
 
 
-@pytest.fixture(autouse=True)# autouse = all functions
+@pytest.fixture(autouse=True)  # autouse = all functions
 def go_to_tmpdir(request):
-    tmpdir = request.getfixturevalue('tmpdir')
+    tmpdir = request.getfixturevalue("tmpdir")
     with tmpdir.as_cwd():
-        yield # protocol generetor
-        
+        yield  # protocol generetor

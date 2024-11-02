@@ -3,8 +3,11 @@ ipython
 ipdb
 pudb
 pytest-watch
+
+# black --check --diff dundie tests integrationCode quality
 flake8
 pyproject-flake8
+black
 
 # install project as editable
 -e .
