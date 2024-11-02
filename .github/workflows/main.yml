@@ -31,8 +31,8 @@ jobs:
             run: pflake8
 
 
-jobs:
   tests:
+    needs: lint
     strategy:
       fail-fast: false
       matrix:
