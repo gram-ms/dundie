@@ -12,13 +12,13 @@ lint:
 	@.venv/bin/pflake8 dundie tests integration
 
 test:
-	@.venv/bin/pytest -vv -s 
+	@.venv/bin/pytest -s --forked 
 
 fmt:
 	@.venv/bin/black dundie tests integration
 
 watch:
-	@@.venv/bin/ptw -- -vv -s tests/
+	@@.venv/bin/ptw -- -vv -s --forked
 #	utilizando entr
 #	ls **/*.py | entr pytest
 
