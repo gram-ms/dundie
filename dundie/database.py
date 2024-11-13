@@ -1,7 +1,9 @@
 import json
+
 from datetime import datetime
-from dundie.settings import DATABASE_PATH, EMAIL_FROM
-from dundie.utils.email import check_valid_email, send_email
+from dundie.settings import DATABASE_PATH  # EMAIL_FROM
+
+from dundie.utils.email import check_valid_email  # send_email
 from dundie.utils.user import generate_simple_password
 
 EMPTY_DB = {"people": {}, "balance": {}, "movement": {}, "users": {}}
@@ -43,7 +45,7 @@ def add_person(db, pk, data):
     table[pk] = person
     if created:
         set_initial_balance(db, pk, person)
-        password = set_initial_password(db, pk)
+        # password = set_initial_password(db, pk)
         # send_email(EMAIL_FROM, pk, "Your dundie password", password)
         # TODO: Encrypt and send only link not password
     return person, created
@@ -65,6 +67,6 @@ def set_initial_balance(db, pk, person):
 def add_movement(db, pk, value, actor="system"):
     movements = db["movement"].setdefault(pk, [])
     movements.append(
-        {"data": datetime.now().isoformat(), "actor": actor, "value": value}
+        {"date": datetime.now().isoformat(), "actor": actor, "value": value}
     )
     db["balance"][pk] = sum([item["value"] for item in movements])

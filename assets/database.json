@@ -12,22 +12,62 @@
         }
     },
     "balance": {
-        "jim@dundlermifflin.com": 500,
-        "schrute@dundlermifflin.com": 100
+        "jim@dundlermifflin.com": 470,
+        "schrute@dundlermifflin.com": 70
     },
     "movement": {
         "jim@dundlermifflin.com": [
             {
-                "data": "2024-11-10T18:41:49.303079",
+                "date": "2024-11-10T18:41:49.303079",
                 "actor": "system",
                 "value": 500
+            },
+            {
+                "date": "2024-11-13T14:43:38.366188",
+                "actor": "eva",
+                "value": 30
+            },
+            {
+                "date": "2024-11-13T14:52:38.756030",
+                "actor": "eva",
+                "value": -30
+            },
+            {
+                "date": "2024-11-13T14:53:19.193349",
+                "actor": "eva",
+                "value": -30
+            },
+            {
+                "date": "2024-11-13T14:56:41.290417",
+                "actor": "eva",
+                "value": 70
+            },
+            {
+                "date": "2024-11-13T14:58:33.809457",
+                "actor": "eva",
+                "value": -70
+            },
+            {
+                "date": "2024-11-13T14:58:40.110620",
+                "actor": "eva",
+                "value": -70
+            },
+            {
+                "date": "2024-11-13T15:00:56.172438",
+                "actor": "eva",
+                "value": 70
             }
         ],
         "schrute@dundlermifflin.com": [
             {
-                "data": "2024-11-10T18:41:49.303130",
+                "date": "2024-11-10T18:41:49.303130",
                 "actor": "system",
                 "value": 100
+            },
+            {
+                "date": "2024-11-13T14:52:38.756044",
+                "actor": "eva",
+                "value": -30
             }
         ]
     },
