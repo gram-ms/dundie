@@ -12,7 +12,7 @@ lint:
 	@.venv/bin/pflake8 dundie tests integration
 
 test:
-	@.venv/bin/pytest -s --forked 
+	@.venv/bin/pytest -s --forked
 
 fmt:
 	@.venv/bin/black dundie tests integration
