@@ -28,6 +28,9 @@ def main():
 @click.argument("filepath", type=click.Path())
 def load(filepath):
     """Loads the file to the database
+
+    # Features
+
     - Validates data
     - Parses the file
     - Loads to database

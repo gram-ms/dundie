@@ -12,7 +12,7 @@
         }
     },
     "balance": {
-        "jim@dundlermifflin.com": 470,
+        "jim@dundlermifflin.com": 450,
         "schrute@dundlermifflin.com": 70
     },
     "movement": {
@@ -56,6 +56,11 @@
                 "date": "2024-11-13T15:00:56.172438",
                 "actor": "eva",
                 "value": 70
+            },
+            {
+                "date": "2024-11-18T16:32:12.186418",
+                "actor": "eva",
+                "value": -20
             }
         ],
         "schrute@dundlermifflin.com": [
