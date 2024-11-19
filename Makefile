@@ -1,4 +1,4 @@
-.PHONY: install virtualenv clean test lint fmt
+.PHONY: install virtualenv clean test lint fmt build publish-test
 
 install:
 # O @ serve para não mostrar o comando no terminal, apenas mostrar o stdout
@@ -36,3 +36,10 @@ clean:
 	@rm -rf htmlcov
 	@rm -rf .tox/
 	@rm -rf docs/_build
+
+build:
+	@python setup.py sdist bdist_wheel
+
+
+publish-test:
+	@twine upload --repository testpypi dist/*

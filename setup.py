@@ -1,3 +1,4 @@
+"""Setup for dundie."""
 import os
 from setuptools import setup, find_packages
 
@@ -39,7 +40,8 @@ setup(
     # irá procurar os pacotes/módulos em todos os diretórios inclusive o atual.
     # As pastas que não tiver um __init__.py serão ignoradas.
     # packages=["dundie"],# geralmente as pastas de módulos no seu diretório
-    packages=find_packages(),
+    packages=find_packages(exclude=["integration"]),
+    include_package_data=True,
     python_requires=">=3.12.2",
     entry_points={"console_scripts": ["dundie = dundie.__main__:main"]},
     install_requires=read_requirements("requirements.txt"),
