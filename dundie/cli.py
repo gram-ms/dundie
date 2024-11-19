@@ -1,7 +1,7 @@
-import pkg_resources
 import rich_click as click
 import json
 
+from importlib.metadata import version
 from rich.console import Console
 from rich.table import Table
 from dundie import core
@@ -16,7 +16,7 @@ click.rich_click.APPEND_METAVARS_HELP = True
 
 # Defining a main command group
 @click.group()
-@click.version_option(pkg_resources.get_distribution("dundie").version)
+@click.version_option(version("dundie"))
 def main():
     """Dunder Mifflin Rewards System.
     This cli aplication controls DM rewards.
