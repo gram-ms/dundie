@@ -1,4 +1,4 @@
-.PHONY: install virtualenv clean test
+.PHONY: install virtualenv clean test lint fmt build publish-test
 
 install:
 # O @ serve para não mostrar o comando no terminal, apenas mostrar o stdout
@@ -8,12 +8,17 @@ install:
 virtualenv:
 	python -m venv .venv
 
-test:
-	@.venv/bin/pytest -vv -s 
+lint:
+	@.venv/bin/pflake8 dundie tests integration
 
+test:
+	@.venv/bin/pytest -s --forked 
+
+fmt:
+	@.venv/bin/black dundie tests integration
 
 watch:
-	@@.venv/bin/ptw -- -vv -s tests/
+	@@.venv/bin/ptw -- -vv -s --forked
 #	utilizando entr
 #	ls **/*.py | entr pytest
 
@@ -31,3 +36,10 @@ clean:
 	@rm -rf htmlcov
 	@rm -rf .tox/
 	@rm -rf docs/_build
+
+build:
+	@python setup.py sdist bdist_wheel
+
+
+publish-test:
+	@twine upload --repository testpypi dist/*

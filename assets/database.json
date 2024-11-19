@@ -1,0 +1,87 @@
+{
+    "people": {
+        "jim@dundlermifflin.com": {
+            "name": "Jim Halpert",
+            "dept": "Sales",
+            "role": "Salesman"
+        },
+        "schrute@dundlermifflin.com": {
+            "name": "Dwight Schrute",
+            "dept": "C-Level",
+            "role": "CEO"
+        }
+    },
+    "balance": {
+        "jim@dundlermifflin.com": 450,
+        "schrute@dundlermifflin.com": 70
+    },
+    "movement": {
+        "jim@dundlermifflin.com": [
+            {
+                "date": "2024-11-10T18:41:49.303079",
+                "actor": "system",
+                "value": 500
+            },
+            {
+                "date": "2024-11-13T14:43:38.366188",
+                "actor": "eva",
+                "value": 30
+            },
+            {
+                "date": "2024-11-13T14:52:38.756030",
+                "actor": "eva",
+                "value": -30
+            },
+            {
+                "date": "2024-11-13T14:53:19.193349",
+                "actor": "eva",
+                "value": -30
+            },
+            {
+                "date": "2024-11-13T14:56:41.290417",
+                "actor": "eva",
+                "value": 70
+            },
+            {
+                "date": "2024-11-13T14:58:33.809457",
+                "actor": "eva",
+                "value": -70
+            },
+            {
+                "date": "2024-11-13T14:58:40.110620",
+                "actor": "eva",
+                "value": -70
+            },
+            {
+                "date": "2024-11-13T15:00:56.172438",
+                "actor": "eva",
+                "value": 70
+            },
+            {
+                "date": "2024-11-18T16:32:12.186418",
+                "actor": "eva",
+                "value": -20
+            }
+        ],
+        "schrute@dundlermifflin.com": [
+            {
+                "date": "2024-11-10T18:41:49.303130",
+                "actor": "system",
+                "value": 100
+            },
+            {
+                "date": "2024-11-13T14:52:38.756044",
+                "actor": "eva",
+                "value": -30
+            }
+        ]
+    },
+    "users": {
+        "jim@dundlermifflin.com": {
+            "password": "fo2r0Us4"
+        },
+        "schrute@dundlermifflin.com": {
+            "password": "2kqr4xA5"
+        }
+    }
+}
