@@ -9,11 +9,29 @@
             "name": "Dwight Schrute",
             "dept": "C-Level",
             "role": "CEO"
+        },
+        "rafildsrf@ddund.com": {
+            "name": "Rafael Rafilds",
+            "dept": "Sales",
+            "role": "Salesman"
+        },
+        "acerolinha@asdf.com": {
+            "name": "Hugo acerola",
+            "dept": "C-Level",
+            "role": "Manager"
+        },
+        "roberta.gamer@asdf.com": {
+            "name": "Roberta Ferreira",
+            "dept": "Design",
+            "role": "Founder"
         }
     },
     "balance": {
-        "jim@dundlermifflin.com": 450,
-        "schrute@dundlermifflin.com": 70
+        "jim@dundlermifflin.com": 500,
+        "schrute@dundlermifflin.com": 70,
+        "rafildsrf@ddund.com": 850,
+        "acerolinha@asdf.com": 20,
+        "roberta.gamer@asdf.com": 500
     },
     "movement": {
         "jim@dundlermifflin.com": [
@@ -61,6 +79,11 @@
                 "date": "2024-11-18T16:32:12.186418",
                 "actor": "eva",
                 "value": -20
+            },
+            {
+                "date": "2024-11-19T18:59:54.359882",
+                "actor": "eva",
+                "value": 50
             }
         ],
         "schrute@dundlermifflin.com": [
@@ -73,6 +96,42 @@
                 "date": "2024-11-13T14:52:38.756044",
                 "actor": "eva",
                 "value": -30
+            }
+        ],
+        "rafildsrf@ddund.com": [
+            {
+                "date": "2024-11-19T18:55:38.601415",
+                "actor": "system",
+                "value": 500
+            },
+            {
+                "date": "2024-11-19T18:58:26.331350",
+                "actor": "eva",
+                "value": 300
+            },
+            {
+                "date": "2024-11-19T18:59:54.359898",
+                "actor": "eva",
+                "value": 50
+            }
+        ],
+        "acerolinha@asdf.com": [
+            {
+                "date": "2024-11-19T18:55:38.601435",
+                "actor": "system",
+                "value": 100
+            },
+            {
+                "date": "2024-11-19T18:58:58.104687",
+                "actor": "eva",
+                "value": -80
+            }
+        ],
+        "roberta.gamer@asdf.com": [
+            {
+                "date": "2024-11-19T18:55:38.601444",
+                "actor": "system",
+                "value": 500
             }
         ]
     },

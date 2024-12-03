@@ -5,9 +5,9 @@ import pytest
 
 @pytest.mark.unit
 @pytest.mark.medium
-def test_load_positive_has_2_people(request):
-    """Test function has 2 people."""
-    assert len(load(PEOPLE_FILE)) == 2
+def test_load_positive_has_5_people(request):
+    """Test function has 5 people."""
+    assert len(load(PEOPLE_FILE)) == 5
 
 
 @pytest.mark.unit
